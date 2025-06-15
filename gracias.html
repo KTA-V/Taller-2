@@ -1,33 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Gracias por tu solicitud</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #e0f7fa;
+      margin: 0;
+      padding: 0;
       color: #004d40;
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #00bcd4;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
       justify-content: center;
-      height: 100vh;
-      margin: 0;
+      align-items: center;
+      flex-direction: column;
+      padding: 2rem;
       text-align: center;
     }
-    .mensaje {
-      background-color: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    h1 {
+      color: #00796b;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      background-color: #00acc1;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #008ba3;
+    }
+
+    footer {
+      background-color: #00bcd4;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-top: 3px solid #008ba3;
     }
   </style>
 </head>
 <body>
-  <div class="mensaje">
+
+  <header>
     <h1>¡Gracias por tu solicitud!</h1>
-    <p>Nos pondremos en contacto contigo pronto 🛠️📞</p>
-    <a href="index.html">Volver a la página principal</a>
-  </div>
+  </header>
+
+  <main>
+    <p>Hemos recibido tu mensaje correctamente. Un técnico se pondrá en contacto contigo a la brevedad.</p>
+    <a href="index.html">← Volver al inicio</a>
+  </main>
+
+  <footer>
+    Industrial Monkeys || FCFM
+  </footer>
+
 </body>
 </html>
