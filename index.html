@@ -2,95 +2,117 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servicio Técnico - Industrial Monkeys</title>
+  <title>Servicio Técnico a tu Puerta</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e0f7fa;
       margin: 0;
       padding: 0;
       color: #004d40;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-
     header {
-      background-color: #00acc1;
+      background-color: #00bcd4;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 2rem 1rem;
     }
-
     main {
-      padding: 20px;
       max-width: 700px;
-      margin: auto;
-    }
-
-    form {
+      margin: 2rem auto;
+      padding: 2rem;
       background-color: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      flex-grow: 1;
     }
-
     label {
       display: block;
-      margin-top: 15px;
+      margin-top: 1rem;
       font-weight: bold;
     }
-
     input, textarea {
       width: 100%;
-      padding: 10px;
-      margin-top: 5px;
+      padding: 0.7rem;
+      margin-top: 0.3rem;
+      border: 1px solid #b2ebf2;
       border-radius: 8px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
+      font-size: 1em;
     }
-
     button {
-      margin-top: 20px;
       background-color: #00acc1;
       color: white;
-      padding: 12px 20px;
+      padding: 0.8rem 1.5rem;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
+      font-size: 1.1em;
+      margin-top: 1.5rem;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
-
     button:hover {
-      background-color: #00838f;
+      background-color: #008ba3;
     }
-
+    .video-section {
+      margin-top: 3rem;
+      text-align: center;
+    }
     video {
       width: 100%;
+      max-height: 360px;
       border-radius: 12px;
-      margin-bottom: 20px;
+      margin-top: 1rem;
     }
-
     footer {
-      margin-top: 50px;
-      padding: 15px;
-      background-color: #004d40;
+      background-color: #00bcd4;
       color: white;
       text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      border-top: 3px solid #008ba3;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Servicio Técnico a Domicilio</h1>
-    <p>Te permitirá contactarte fácilmente con técnicos y especialistas en mantenimiento 🛠️</p>
+    <h1>¡Un técnico de calidad a la puerta de tu casa!</h1>
+    <p>Te permitirá contactarte fácilmente con profesionales confiables de mantención y reparación. Rápido, seguro y sin complicaciones.</p>
   </header>
 
   <main>
-    <video controls>
-      <source src="mi-video.mp4" type="video/mp4">
-      Tu navegador no soporta el video.
-    </video>
-    <p><strong>¡Muy pronto!</strong> Una plataforma donde encontrarás técnicos de calidad a la puerta de tu casa 🏡🔧</p>
+    <form id="formulario">
+      <label for="nombre">Nombre del solicitante:</label>
+      <input type="text" id="nombre" required />
 
+      <label for="contacto">Contacto (teléfono o correo):</label>
+      <input type="text" id="contacto" required />
+
+      <label for="descripcion">Describe tu problema:</label>
+      <textarea id="descripcion" rows="5" required></textarea>
+
+      <button type="submit">Enviar solicitud</button>
+    </form>
+
+    <div class="video-section">
+      <h2>🔧 Muy pronto, una nueva forma de conectar con técnicos de confianza</h2>
+      <p>Estamos desarrollando una plataforma donde podrás solicitar ayuda técnica desde cualquier lugar, de forma fácil y segura.</p>
+      <video controls>
+        <source src="mi-video.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
+      </video>
+    </div>
+  </main>
+
+  <footer>
+    <p>Industrial Monkeys || FCFM</p>
+  </footer>
     <form action="https://formsubmit.co/monkeysindustrial@gmail.com" method="POST">
       <input type="text" name="nombre" required placeholder="Tu nombre">
       <input type="text" name="contacto" required placeholder="Correo o teléfono">
