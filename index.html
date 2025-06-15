@@ -91,55 +91,18 @@
     </video>
     <p><strong>¡Muy pronto!</strong> Una plataforma donde encontrarás técnicos de calidad a la puerta de tu casa 🏡🔧</p>
 
-    <form id="formulario">
-      <label for="nombre">Nombre del solicitante:</label>
-      <input type="text" id="nombre" name="nombre" required>
+<form action="https://formsubmit.co/monkeysindustrial@gmail.com" method="POST">
+  <input type="text" name="nombre" required placeholder="Tu nombre">
+  <input type="text" name="contacto" required placeholder="Correo o teléfono">
+  <textarea name="descripcion" required placeholder="Describe el problema"></textarea>
+  <button type="submit">Enviar solicitud</button>
+</form>
 
-      <label for="contacto">Contacto (correo o teléfono):</label>
-      <input type="text" id="contacto" name="contacto" required>
-
-      <label for="descripcion">Describe el problema que tienes:</label>
-      <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
-
-      <button type="submit">Enviar solicitud</button>
-    </form>
   </main>
 
   <footer>
     Industrial Monkeys || FCFM
   </footer>
-
-  <script>
-    const webAppURL = "https://script.google.com/macros/s/AKfycbyU85cjaP4_swKEAxOApJUCvlxYE_yD3Op726wql8kBMj_j_jXbL1aM5b_2LFYJdQMu/exec"; // 👈 REEMPLAZA ESTO
-
-document.getElementById("formulario").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const nombre = document.getElementById("nombre").value;
-  const contacto = document.getElementById("contacto").value;
-  const descripcion = document.getElementById("descripcion").value;
-
-  const datos = { nombre, contacto, descripcion };
-
-  fetch(webAppURL, {
-    method: "POST",
-    body: JSON.stringify(datos),
-    headers: {
-      "Content-Type": "application/json"
-    }
-  })
-  .then(res => res.text())
-  .then(res => {
-    alert("✅ ¡Tu solicitud fue enviada con éxito!");
-    document.getElementById("formulario").reset();
-  })
-  .catch(err => {
-    alert("❌ Error al enviar. Intenta nuevamente.");
-    console.error(err);
-  });
-});
-</script>
-
 
 </body>
 </html>
