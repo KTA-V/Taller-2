@@ -112,37 +112,34 @@
   <script>
     const webAppURL = "https://script.google.com/macros/s/AKfycbyU85cjaP4_swKEAxOApJUCvlxYE_yD3Op726wql8kBMj_j_jXbL1aM5b_2LFYJdQMu/exec"; // 👈 REEMPLAZA ESTO
 
-    document.getElementById("formulario").addEventListener("submit", function(e) {
-      e.preventDefault();
+document.getElementById("formulario").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-      const nombre = document.getElementById("nombre").value;
-      const contacto = document.getElementById("contacto").value;
-      const descripcion = document.getElementById("descripcion").value;
+  const nombre = document.getElementById("nombre").value;
+  const contacto = document.getElementById("contacto").value;
+  const descripcion = document.getElementById("descripcion").value;
 
-      const datos = {
-        nombre,
-        contacto,
-        descripcion
-      };
+  const datos = { nombre, contacto, descripcion };
 
-      fetch(webAppURL, {
-        method: "POST",
-        body: JSON.stringify(datos),
-        headers: {
-          "Content-Type": "application/json"
-        }
-      })
-      .then(res => res.text())
-      .then(res => {
-        alert("✅ ¡Tu solicitud fue enviada con éxito!");
-        document.getElementById("formulario").reset();
-      })
-      .catch(err => {
-        alert("❌ Error al enviar. Intenta nuevamente.");
-        console.error(err);
-      });
-    });
-  </script>
+  fetch(webAppURL, {
+    method: "POST",
+    body: JSON.stringify(datos),
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+  .then(res => res.text())
+  .then(res => {
+    alert("✅ ¡Tu solicitud fue enviada con éxito!");
+    document.getElementById("formulario").reset();
+  })
+  .catch(err => {
+    alert("❌ Error al enviar. Intenta nuevamente.");
+    console.error(err);
+  });
+});
+</script>
+
 
 </body>
 </html>
