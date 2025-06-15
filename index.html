@@ -87,21 +87,25 @@
   </header>
 
   <main>
-    <form action="https://formsubmit.co/monkeysindustrial@gmail.com" method="POST">
-      <!-- Puedes ocultar el captcha si quieres -->
-      <input type="hidden" name="_captcha" value="false">
+<form action="https://formsubmit.co/monkeysindustrial@gmail.com" method="POST">
+  <!-- Oculta el captcha -->
+  <input type="hidden" name="_captcha" value="false">
+  
+  <!-- Redirige a la página personalizada de agradecimiento -->
+  <input type="hidden" name="_next" value="https://kta-v.github.io/gracias.html">
 
-      <label for="nombre">Nombre del solicitante:</label>
-      <input type="text" id="nombre" name="nombre" required />
+  <label for="nombre">Nombre del solicitante:</label>
+  <input type="text" id="nombre" name="nombre" required />
 
-      <label for="contacto">Contacto (teléfono o correo):</label>
-      <input type="text" id="contacto" name="contacto" required />
+  <label for="contacto">Contacto (teléfono o correo):</label>
+  <input type="text" id="contacto" name="contacto" required />
 
-      <label for="descripcion">Descríbenos tu problema:</label>
-      <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+  <label for="descripcion">Descríbenos tu problema:</label>
+  <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
 
-      <button type="submit">Enviar solicitud</button>
-    </form>
+  <button type="submit">Enviar solicitud</button>
+</form>
+
 
     <div class="video-section">
       <h2>✨ Muy pronto, una nueva forma de conectar con técnicos de confianza ✨</h2>
