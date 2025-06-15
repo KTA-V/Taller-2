@@ -87,15 +87,18 @@
   </header>
 
   <main>
-    <form id="formulario">
+    <form action="https://formsubmit.co/monkeysindustrial@gmail.com" method="POST">
+      <!-- Puedes ocultar el captcha si quieres -->
+      <input type="hidden" name="_captcha" value="false">
+
       <label for="nombre">Nombre del solicitante:</label>
-      <input type="text" id="nombre" required />
+      <input type="text" id="nombre" name="nombre" required />
 
       <label for="contacto">Contacto (teléfono o correo):</label>
-      <input type="text" id="contacto" required />
+      <input type="text" id="contacto" name="contacto" required />
 
       <label for="descripcion">Describe tu problema:</label>
-      <textarea id="descripcion" rows="5" required></textarea>
+      <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
 
       <button type="submit">Enviar solicitud</button>
     </form>
@@ -112,22 +115,6 @@
 
   <footer>
     <p>Industrial Monkeys || FCFM</p>
-  </footer>
-    <form action="https://formsubmit.co/monkeysindustrial@gmail.com" method="POST">
-      <input type="text" name="nombre" required placeholder="Tu nombre">
-      <input type="text" name="contacto" required placeholder="Correo o teléfono">
-      <textarea name="descripcion" required placeholder="Describe el problema"></textarea>
-
-      <!-- Campos ocultos -->
-      <input type="hidden" name="_next" value="https://kta-v.github.io/Taller-2/gracias.html">
-      <input type="hidden" name="_captcha" value="false">
-
-      <button type="submit">Enviar solicitud</button>
-    </form>
-  </main>
-
-  <footer>
-    Industrial Monkeys || FCFM
   </footer>
 
 </body>
