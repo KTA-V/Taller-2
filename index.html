@@ -91,13 +91,17 @@
     </video>
     <p><strong>¡Muy pronto!</strong> Una plataforma donde encontrarás técnicos de calidad a la puerta de tu casa 🏡🔧</p>
 
-<form action="https://formsubmit.co/monkeysindustrial@gmail.com" method="POST">
-  <input type="text" name="nombre" required placeholder="Tu nombre">
-  <input type="text" name="contacto" required placeholder="Correo o teléfono">
-  <textarea name="descripcion" required placeholder="Describe el problema"></textarea>
-  <button type="submit">Enviar solicitud</button>
-</form>
+    <form action="https://formsubmit.co/monkeysindustrial@gmail.com" method="POST">
+      <input type="text" name="nombre" required placeholder="Tu nombre">
+      <input type="text" name="contacto" required placeholder="Correo o teléfono">
+      <textarea name="descripcion" required placeholder="Describe el problema"></textarea>
 
+      <!-- Campos ocultos -->
+      <input type="hidden" name="_next" value="https://kta-v.github.io/Taller-2/gracias.html">
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit">Enviar solicitud</button>
+    </form>
   </main>
 
   <footer>
@@ -106,3 +110,4 @@
 
 </body>
 </html>
+
