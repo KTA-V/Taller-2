@@ -29,6 +29,16 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       flex-grow: 1;
     }
+    h2 {
+      margin-top: 2rem;
+      color: #00796b;
+    }
+    p.section-description {
+      margin-top: 0.3rem;
+      font-size: 1rem;
+      color: #00695c;
+      margin-bottom: 1rem;
+    }
     label {
       display: block;
       margin-top: 1rem;
@@ -87,26 +97,55 @@
   </header>
 
   <main>
-<form action="https://formsubmit.co/monkeysindustrial@gmail.com" method="POST">
-  <!-- Oculta el captcha -->
-  <input type="hidden" name="_captcha" value="false">
-  
-  <!-- Redirige a la página personalizada de agradecimiento -->
-  <input type="hidden" name="_next" value="https://kta-v.github.io/Taller-2/gracias.html">
 
-  <label for="nombre">Nombre del solicitante:</label>
-  <input type="text" id="nombre" name="nombre" required />
+    <!-- FORMULARIO: ¿Solicitas ayuda de un técnico? -->
+    <form action="https://formsubmit.co/monkeysindustrial@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://kta-v.github.io/Taller-2/gracias.html">
 
-  <label for="contacto">Contacto (teléfono o correo):</label>
-  <input type="text" id="contacto" name="contacto" required />
+      <h2>¿Solicitas ayuda de un técnico?</h2>
+      <p class="section-description">
+        Para poder brindarte el mejor apoyo posible, te pedimos que nos compartas tus datos de contacto y una breve descripción de tu situación.
+      </p>
 
-  <label for="descripcion">Descríbenos tu problema:</label>
-  <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+      <label for="nombre_solicitante">Nombre del solicitante:</label>
+      <input type="text" id="nombre_solicitante" name="nombre_solicitante" required />
 
-  <button type="submit">Enviar solicitud</button>
-</form>
+      <label for="contacto_solicitante">Contacto (teléfono o correo):</label>
+      <input type="text" id="contacto_solicitante" name="contacto_solicitante" required />
 
+      <label for="comuna_solicitante">Comuna:</label>
+      <input type="text" id="comuna_solicitante" name="comuna_solicitante" required />
 
+      <label for="descripcion">Descríbenos tu problema:</label>
+      <textarea id="descripcion" name="descripcion" rows="5" required></textarea>
+
+      <button type="submit">Enviar solicitud de ayuda</button>
+    </form>
+
+    <!-- FORMULARIO: ¿Buscas un contacto...? -->
+    <form action="https://formsubmit.co/monkeysindustrial@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://kta-v.github.io/Taller-2/gracias.html">
+
+      <h2>¿Buscas un contacto confiable en caso de necesitar ayuda?</h2>
+      <p class="section-description">
+        Nunca está de más tener a alguien de confianza a quien acudir. Déjanos tus datos y seremos ese contacto seguro y accesible cuando lo necesites.
+      </p>
+
+      <label for="nombre_contacto">Nombre del solicitante:</label>
+      <input type="text" id="nombre_contacto" name="nombre_contacto" required />
+
+      <label for="contacto_contacto">Contacto (teléfono o correo):</label>
+      <input type="text" id="contacto_contacto" name="contacto_contacto" required />
+
+      <label for="comuna_contacto">Comuna:</label>
+      <input type="text" id="comuna_contacto" name="comuna_contacto" required />
+
+      <button type="submit">Enviar solicitud de contacto de confianza</button>
+    </form>
+
+    <!-- Sección de video -->
     <div class="video-section">
       <h2>✨ Muy pronto, una nueva forma de conectar con técnicos de confianza ✨</h2>
       <p>Estamos desarrollando una plataforma donde podrás solicitar ayuda técnica desde cualquier lugar, de forma fácil y segura.</p>
@@ -115,6 +154,7 @@
         Tu navegador no soporta el video.
       </video>
     </div>
+
   </main>
 
   <footer>
@@ -123,4 +163,3 @@
 
 </body>
 </html>
-
